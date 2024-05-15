@@ -1,0 +1,641 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+#seller {
+  display: flex;
+  margin: 0 auto;
+
+  .menu {
+    width: 640px;
+    position: relative;
+    z-index: 200;
+
+    .menuTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding-right: 10px;
+      height: 40px;
+      padding-left: 10px;
+      // background-color: whitesmoke;
+
+
+      .navigate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+      }
+
+      h3 {
+        color: #cccccc;
+        font-size: 20px;
+        // color: orangered;
+      }
+
+      i.setting {
+        color: #cccccc;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      div.shopInfo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        h3.shopName {
+          color: #009900;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 5px;
+
+
+        }
+
+        i.logout {
+          cursor: pointer;
+          transition: all 0.3s;
+          color: orangered;
+
+          &:hover {
+            color: red;
+          }
+        }
+
+        i.shopIcon {
+          display: block;
+          width: 28px;
+          height: 28px;
+          border: 1px solid #009900;
+          text-align: center;
+          line-height: 25px;
+          border-radius: 50%;
+          color: white;
+          background: #009900;
+          font-size: 14px;
+        }
+
+        p.staffName {
+          font-size: 12px;
+          font-weight: bold;
+          color: orangered;
+        }
+
+      }
+    }
+
+    .slider {
+      padding: 5px 0;
+      background-color: rgba(110, 78, 255, 0.4);
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      min-height: 100px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .sliderContent {
+        display: flex;
+
+        h1 {
+          text-align: center;
+          color: white;
+          width: 640px;
+        }
+
+        .addButton {
+          margin-left: 5px;
+          width: 90px;
+          height: 90px;
+          background-color: orangered;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          border: 2px solid transparent;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all .3s;
+
+          &:hover {
+            background-color: red;
+
+          }
+
+          button {
+            border: none;
+            background-color: transparent;
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          }
+        }
+
+        .sliderItem {
+          margin-right: 5px;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #0066ff;
+          color: white;
+          border: 2px solid transparent;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          cursor: pointer;
+          position: relative;
+          z-index: 1000;
+
+          // &:hover {
+          //   border: 2px solid red;
+          // }
+          p {
+            // height: 60px;
+            // width: 60px;
+            padding: 0 3px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            overflow-wrap: break-word;
+          }
+
+          input {
+            width: 100%;
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          i.deleteCategory {
+            position: absolute;
+            bottom: 2px;
+            color: #cccccc;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+              color: red;
+            }
+
+          }
+        }
+
+      }
+    }
+
+    .container {
+      background-color: white;
+      min-height: calc(100vh - 140px);
+      overflow-y: scroll;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .content {
+        width: 640px;
+        margin: 3px auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 10px;
+        background-color: white;
+
+        .addButton {
+          width: 200px;
+          height: 250px;
+          padding-top: 5px;
+          background-color: orangered;
+          border-radius: 5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          border: 2px solid transparent;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all .3s;
+
+          &:hover {
+            background-color: red;
+
+          }
+
+          button {
+            border: none;
+            background-color: transparent;
+            font-size: 68px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .table {
+    width: 430px;
+    height: 100vh;
+    padding: 0 0 3px 3px;
+    // background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+
+    // overflow-y: scroll;
+    // right: 0;
+    .tableTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding-right: 10px;
+
+      // background-color: orangered;
+      // color: white;
+      div.money {
+        // padding-right: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3px;
+
+        &:first-child {
+          color: #009900;
+        }
+
+        &:last-child {
+          color: #cccccc;
+        }
+
+        p {
+          font-size: 12px;
+          text-align: right;
+          font-weight: bold;
+
+          &:first-child {
+            width: 70px;
+          }
+
+          &:last-child {
+            text-align: right;
+            // min-width: 80px;
+          }
+        }
+      }
+
+      h3 {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        color: orangered;
+        // color: white;
+      }
+
+      div.countTable {
+        padding-right: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3px;
+
+        &:first-child {
+          color: #009900;
+        }
+
+        &:last-child {
+          color: #cccccc;
+        }
+
+        p {
+          font-size: 12px;
+          text-align: right;
+          font-weight: bold;
+
+          &:first-child {
+            width: 100px;
+          }
+
+          &:last-child {
+            text-align: right;
+            // min-width: 80px;
+          }
+        }
+      }
+    }
+
+    .tableContent {
+      height: calc(100vh - 40px);
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+
+      .slider {
+        padding: 10px 10px 0;
+        background-color: rgba(110, 78, 255, 0.4);
+        min-height: 100px;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .sliderContent {
+          display: grid;
+          // grid-template-columns: repeat(10, 1fr);
+
+          .sliderItemWrap {
+            padding: 0 10px 10px 0;
+            position: relative;
+
+            .sliderItem {
+              padding: 5px;
+              width: 100px;
+              height: 80px;
+              border-radius: 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              background-color: #009900;
+              color: white;
+              border: 2px solid transparent;
+              position: relative;
+
+              // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+              h4,
+              h5 {
+                color: white;
+              }
+
+              input {
+                width: 100%;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+              }
+
+              i.deleteTableName {
+                position: absolute;
+                z-index: 3;
+                right: 2px;
+                bottom: 2px;
+                font-size: 12px;
+                color: #cccccc;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                  color: red;
+                }
+              }
+            }
+
+            .addButton {
+              padding: 5px;
+              width: 100px;
+              height: 80px;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: orangered;
+              color: white;
+              border: 2px solid transparent;
+              cursor: pointer;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: red;
+              }
+
+              button {
+                border: none;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+              }
+            }
+
+            .overItem {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 1;
+              cursor: pointer;
+            }
+          }
+
+          h1 {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+          }
+        }
+      }
+
+      .content {
+        height: calc(100vh - 260px);
+        background-color: white;
+        margin-top: 10px;
+        overflow-y: scroll;
+        padding-bottom: 60px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .function {
+          background-color: #009900;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: sticky;
+          top: 0;
+
+          button {
+            //   background-color: yellow;
+            // width: 70px;
+            padding: 0 10px;
+            height: 24px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &.delete {
+              height: 24px;
+              width: 24px;
+              color: orangered;
+              border-radius: 50%;
+              text-align: center;
+              padding: 0;
+            }
+
+            &:hover {
+              background-color: orange;
+              color: white;
+            }
+
+            &:hover.delete {
+              background-color: orangered;
+              color: white;
+            }
+          }
+
+          h3 {
+            text-align: right;
+            justify-content: flex-end;
+            margin-right: 10px;
+            font-size: 16px;
+            color: white;
+          }
+        }
+
+        .item {
+          padding: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid black;
+
+          .tenSanPham {
+            width: 200px;
+
+            h4 {
+              font-size: 16px;
+              color: #009900;
+            }
+
+            span {
+              color: rgb(110, 110, 110);
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: bold;
+            width: 100px;
+            text-align: right;
+          }
+
+          button {
+            margin: 0 5px;
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 14px;
+            color: white;
+            cursor: pointer;
+
+            &.tang {
+              background-color: #009900;
+            }
+
+            &.giam {
+              border: 1px solid #009900;
+              background-color: white;
+              color: black;
+            }
+
+            &.xoa {
+              background-color: orangered;
+            }
+          }
+        }
+      }
+
+      .nothing {
+        height: calc(100vh - 240px);
+        background-color: white;
+        margin-top: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          color: #cccccc;
+        }
+      }
+    }
+
+  }
+
+  #paying {
+    height: 300px;
+    width: 600px;
+    background-color: #cccccc;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // h1 {
+    //   color: red;
+    //   text-align: center;
+    // }
+  }
+}

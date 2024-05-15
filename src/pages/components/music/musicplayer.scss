@@ -1,0 +1,272 @@
+#container {
+    background-color: white;
+}
+
+.musicList {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: scroll;
+    transition: all .5s;
+    height: 0;
+    margin-bottom: 10px;
+    background-color: white;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    h3 {
+        color: orangered;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    p {
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+
+        span {
+            display: block;
+            width: 20px;
+            text-align: right;
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+}
+
+.mucsicPlayer {
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // background-color: black;
+
+    .mucsicPlayerContent {
+        width: 400px;
+        height: 120px;
+        padding: 15px 20px 10px;
+        // background-color: rgb(220, 220, 220);
+        background-color: rgba(200, 200, 200, 0.5);
+        margin: 0 auto;
+        border-radius: 20px;
+        position: relative;
+        // border: 1px solid orangered;
+        // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+
+        .timer {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            // gap: 10;
+
+            .timerContent {
+                width: 100%;
+                text-align: center;
+
+                input[type="range"].timeSlider {
+                    -webkit-appearance: none;
+                    /* Ẩn giao diện mặc định trên Safari và các trình duyệt WebKit khác */
+                    appearance: none;
+                    /* Ẩn giao diện mặc định trên các trình duyệt khác */
+                    width: 100%;
+                    height: 2px;
+                    background-color: white;
+                    /* Màu nền thanh trượt */
+                    border-radius: 5px;
+                    /* Độ cong của viền thanh trượt */
+                    outline: none;
+                    /* Loại bỏ viền xung quanh */
+                    margin-top: 10px;
+                }
+
+                input[type="range"].timeSlider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    /* Ẩn giao diện mặc định trên Safari và các trình duyệt WebKit khác */
+                    appearance: none;
+                    /* Ẩn giao diện mặc định trên các trình duyệt khác */
+                    width: 8px;
+                    /* Chiều rộng của nút tròn slide */
+                    height: 8px;
+                    /* Chiều cao của nút tròn slide */
+                    background-color: orangered;
+                    /* Màu của nút tròn */
+                    border-radius: 50%;
+                    /* Độ cong của nút tròn */
+                    cursor: pointer;
+                    /* Con trỏ chuột khi rê vào nút tròn */
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                    /* Đổ bóng cho nút tròn */
+                }
+
+                // input.timeSlider {
+                //     width: 200px;
+                //     height: 3px;
+                //     // color: white;
+                //     // background-color: red;
+                //     // border: 1px solid red;
+                // }
+
+                p {
+                    font-size: 10px;
+                    color: red;
+                    font-weight: bold;
+                }
+
+            }
+
+
+
+        }
+
+        .speaker {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            button {
+                height: 25px;
+                width: 25px;
+                border: 1px solid #009900;
+                color: #009900;
+
+                background-color: transparent;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    border: 1px solid orangered;
+                    color: orangered;
+
+
+
+
+
+                }
+            }
+        }
+
+        .listSongLength {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+
+            i {
+                color: orangered;
+                width: 25px;
+                height: 25px;
+                font-size: 11px;
+                // border: 1px solid orangered;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 25px;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    color: #009900;
+
+                }
+
+            }
+
+
+        }
+
+
+        .controller {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            button {
+                width: 40px;
+                height: 25px;
+                background: orangered;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: #009900;
+                }
+
+                &.play {
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: #009900;
+
+                    &:hover {
+                        background-color: orangered;
+
+
+                    }
+
+                }
+            }
+        }
+
+        .playingSong {
+            width: 70%;
+            margin: 0 auto -5px;
+            overflow: hidden;
+
+            p {
+
+                height: 18px;
+                line-height: 18px;
+                font-size: 11px;
+                font-weight: bold;
+                margin: 0 auto;
+                text-align: center;
+                // border: 1px solid white;
+                background-color: orangered;
+                color: white;
+                overflow: hidden;
+                border-radius: 20px;
+
+            }
+        }
+
+    }
+}

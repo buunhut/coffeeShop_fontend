@@ -1,0 +1,339 @@
+#report {
+    max-width: 1070px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    padding: 10px;
+
+    .reportTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+
+        p.report {
+            color: orangered;
+            font-size: 14px;
+            font-weight: bold;
+
+            &.back {
+                color: black;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    color: orangered;
+                }
+            }
+        }
+    }
+
+    .form {
+        margin-top: 5px;
+
+
+        form {
+            .formContent {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+
+                .formWrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    .formItem {
+                        display: flex;
+                        align-items: center;
+
+                        label {
+                            margin-right: 5px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #cccccc;
+                        }
+
+                        input {
+                            height: 30px;
+                        }
+
+                        select {
+                            height: 30px;
+                            font-size: 16px;
+
+                        }
+                    }
+                }
+
+                .reportInfo {
+                    .reportInfoItem {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 5px;
+                        margin-right: 10px;
+
+                        p {
+                            text-align: right;
+                            width: 100px;
+
+                            &.paid {
+                                color: #009900;
+                                font-size: 15px;
+                                font-weight: 500;
+                            }
+
+                            &.serving {
+                                color: silver;
+                                font-size: 15px;
+                                font-weight: 500;
+                            }
+
+                            &.total {
+                                color: orangered;
+                                font-size: 15px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        h5 {
+                            text-align: right;
+                            color: #009900;
+                            font-size: 15px;
+                            font-weight: 500;
+
+                            &.serving {
+                                color: silver;
+                                font-size: 15px;
+                                font-weight: 500;
+                            }
+
+                            &.total {
+                                color: orangered;
+                                font-size: 15px;
+                                font-weight: 600;
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .billContent {
+
+        table {
+            margin: 20px auto;
+            width: 100%;
+            border-collapse: collapse;
+            // border: 1px solid black;
+
+            thead {
+                tr {
+                    td {
+                        font-weight: bold;
+                        background: #009900;
+                        color: white;
+                    }
+                }
+            }
+
+            tr {
+                // border: 1px solid black;
+                cursor: pointer;
+
+                &:nth-child(even) {
+                    background-color: rgba(240, 240, 240, 0.3);
+                }
+
+                &:hover {
+                    background-color: rgba(240, 240, 240);
+
+                }
+
+
+                td {
+                    // border: 1px solid black;
+                    padding: 10px 10px;
+
+                    &.tdNumber {
+                        text-align: right;
+                    }
+
+                    &.tdCenter {
+                        text-align: center;
+
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+
+
+
+    .noData {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+
+
+        h1 {
+            color: #cccccc;
+            text-align: center;
+        }
+
+    }
+
+    .detaileVeiw {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.578);
+
+
+        .detaileVeiwContent {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 30px;
+            width: 640px;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+
+
+            .detaileVeiwWrap {
+                padding: 10px;
+                border: 1px solid #009900;
+
+                h3 {
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    margin: 0 0 10px 0;
+                    background-color: #009900;
+                    color: white;
+                    display: inline;
+                    padding: 0 20px;
+                    position: absolute;
+                    top: 35px;
+                    left: -10px;
+                }
+
+                button {
+                    height: 22px;
+                    width: 22px;
+                    text-align: center;
+                    background-color: orangered;
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all .3s;
+
+                    &:hover {
+                        background-color: red;
+
+
+                    }
+                }
+
+                .detailTitle {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+
+                    .detailTitleItemLeft {
+                        width: 200px;
+
+
+                        p {
+                            color: #009900;
+                            font-size: 14px;
+                            margin-top: 5px;
+                            font-weight: bold;
+
+                        }
+                    }
+
+                    .detailTitleItemRight {
+                        width: 300px;
+
+
+                        p {
+                            color: rgb(116, 116, 116);
+                            font-size: 14px;
+                            margin-top: 5px;
+                            text-align: right;
+
+
+                        }
+                    }
+
+                }
+
+                .status {
+                    margin: 10px 0;
+
+                    p {
+                        color: #009900;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: right;
+
+                    }
+                }
+
+
+                table {
+                    margin: 10px 0;
+                    border-collapse: collapse;
+                    width: 100%;
+
+                    tr {
+                        td {
+                            border: 1px solid silver;
+                            padding: 5px 10px;
+
+                            &.tdNumber {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+
+            table.receipt {
+                thead {
+                    background-color: #009900;
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+
+}

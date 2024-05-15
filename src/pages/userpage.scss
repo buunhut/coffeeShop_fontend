@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  /* Bỏ gạch chân */
+}
+
+span.navigation {
+  color: #009900;
+  cursor: pointer;
+}
+
+
+body {
+  background-color: whitesmoke;
+
+  .content {
+
+    div.lock,
+    div.user {
+      text-align: center;
+      margin-top: 30px;
+
+      i {
+        font-size: 68px;
+        color: orangered;
+      }
+    }
+
+    h1 {
+      color: orangered;
+      text-align: center;
+      margin: 10px 0 20px 0;
+    }
+
+    .form {
+      width: 360px;
+      margin: 10px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      .inputItem {
+        border-bottom: 1px solid #cccccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2px;
+        margin: 2px 0;
+
+        i {
+          color: #cccccc;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+
+          &.showPass {
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+              color: red;
+            }
+
+          }
+        }
+
+
+
+        input {
+          width: 100%;
+          height: 30px;
+          padding: 0 5px;
+          border: none;
+          outline: none;
+          font-size: 16px;
+        }
+      }
+
+      p.alert {
+        margin-bottom: 3px;
+        text-align: right;
+        color: red;
+        font-size: 12px;
+        text-transform: initial;
+      }
+
+      button {
+        width: 100%;
+        height: 34px;
+        text-align: center;
+        margin: 10px 0 10px;
+        background-color: orangered;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+
+    p {
+      color: #cccccc;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+
+      a {
+        color: #cccccc;
+      }
+    }
+  }
+}

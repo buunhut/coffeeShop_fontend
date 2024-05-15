@@ -1,0 +1,30 @@
+.navigateButton {
+    p {
+        cursor: pointer;
+        transition: all .3s;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        transition: width 0.3s; // Áp dụng hiệu ứng transition cho width của border-bottom
+        display: inline;
+
+        &::after {
+            content: '';
+            width: 0; // Bắt đầu với border-bottom có width là 0
+            height: 2px;
+            background-color: orangered;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            transition: width 0.3s; // Áp dụng hiệu ứng transition cho width của border-bottom
+        }
+
+        &:hover {
+            color: orangered;
+
+            &::after {
+                width: 100%; // Thay đổi width của border-bottom thành 100% khi hover
+            }
+        }
+    }
+}
