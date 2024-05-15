@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { capitalizeFirstLetter, saveMenu } from "../../SellPage";
-import { addressURL } from "../product/ProductItem";
+import { capitalizeFirstLetter, API, saveMenu } from "../../SellPage";
 import axios from "axios";
 import { updateIsLoading } from "../../../redux/slice/settingSlice";
 import { useDispatch } from "react-redux";
