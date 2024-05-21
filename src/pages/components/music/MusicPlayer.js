@@ -1,94 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./musicplayer.scss";
-import { capitalizeFirstLetter } from "../../SellPage";
+import { API, capitalizeFirstLetter } from "../../SellPage";
 
 const MusicPlayer = ({ listSong }) => {
   const audioRef = useRef();
   const timeSliderRef = useRef();
-
-  //listSong
-  // const [listSong, setListSong] = useState([
-  //   {
-  //     songId: 1,
-  //     songName: "khi người đàn ông khóc - lý hải - first",
-  //     songLink: "tet_binh_an_2.mp3",
-  //   },
-  //   {
-  //     songId: 2,
-  //     songName: "mùa xuân ơi - lý hải",
-  //     songLink: "mua_xuan_oi.mp3",
-  //   },
-  //   {
-  //     songId: 3,
-  //     songName: "tết bình an - lý hải",
-  //     songLink: "tet_binh_an.mp3",
-  //   },
-  //   {
-  //     songId: 4,
-  //     songName: "tết bình an_2 - lý hải ",
-  //     songLink: "long_phung_sum_vay.mp3",
-  //   },
-  //   {
-  //     songId: 5,
-  //     songName: "khi người đàn ông khóc - lý hải - first",
-  //     songLink: "tet_binh_an_2.mp3",
-  //   },
-  //   {
-  //     songId: 6,
-  //     songName: "mùa xuân ơi - lý hải",
-  //     songLink: "mua_xuan_oi.mp3",
-  //   },
-  //   {
-  //     songId: 7,
-  //     songName: "tết bình an - lý hải",
-  //     songLink: "tet_binh_an.mp3",
-  //   },
-  //   {
-  //     songId: 8,
-  //     songName: "tết bình an_2 - lý hải ",
-  //     songLink: "long_phung_sum_vay.mp3",
-  //   },
-  //   {
-  //     songId: 9,
-  //     songName: "khi người đàn ông khóc - lý hải - first",
-  //     songLink: "tet_binh_an_2.mp3",
-  //   },
-  //   {
-  //     songId: 10,
-  //     songName: "mùa xuân ơi - lý hải",
-  //     songLink: "mua_xuan_oi.mp3",
-  //   },
-  //   {
-  //     songId: 11,
-  //     songName: "tết bình an - lý hải",
-  //     songLink: "tet_binh_an.mp3",
-  //   },
-  //   {
-  //     songId: 12,
-  //     songName: "tết bình an_2 - lý hải ",
-  //     songLink: "long_phung_sum_vay.mp3",
-  //   },
-  //   {
-  //     songId: 13,
-  //     songName: "khi người đàn ông khóc - lý hải - first",
-  //     songLink: "tet_binh_an_2.mp3",
-  //   },
-  //   {
-  //     songId: 14,
-  //     songName: "mùa xuân ơi - lý hải",
-  //     songLink: "mua_xuan_oi.mp3",
-  //   },
-  //   {
-  //     songId: 15,
-  //     songName: "tết bình an - lý hải",
-  //     songLink: "tet_binh_an.mp3",
-  //   },
-  //   {
-  //     songId: 16,
-  //     songName: "tết bình an_2 - lý hải ",
-  //     songLink: "long_phung_sum_vay.mp3",
-  //   },
-  // ]);
 
   //list
   const [showList, setShowList] = useState(false);
@@ -314,7 +230,7 @@ const MusicPlayer = ({ listSong }) => {
             loop={repeat}
             onEnded={handleSongEnded}
             onLoadedMetadata={handleAudioLoaded}
-            src={`http://localhost:8080/${playingSong?.songLink}`}
+            src={`${API}/${playingSong?.songLink}`}
           />
           <div className="playingSong">
             <p>{capitalizeFirstLetter(playingSong?.songName)}</p>

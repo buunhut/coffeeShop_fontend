@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { updateMenu, updateMenuActive } from "../redux/slice/menuSlice";
 import { updateListBill } from "../redux/slice/billSlice";
-import ProductItem, { addressURL } from "./components/product/ProductItem";
+import ProductItem from "./components/product/ProductItem";
 import ProductItemSettingMode from "./components/product/ProductItemSettingMode";
 import {
   updateIsLoading,
