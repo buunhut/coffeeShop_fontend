@@ -156,6 +156,7 @@
           margin-right: 5px;
           width: 90px;
           height: 90px;
+          padding: 4px;
           border-radius: 50%;
           display: flex;
           flex-direction: column;
@@ -184,13 +185,34 @@
 
           input {
             width: 100%;
+            height: 26px;
             text-align: center;
-            border: none;
-            outline: none;
+            // border: none;
+            // outline: none;
             background-color: transparent;
             color: white;
             font-size: 14px;
             font-weight: bold;
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+            -webkit-appearance: none;
+            /* Remove default styling in Safari */
+            -moz-appearance: none;
+            /* Remove default styling in Firefox */
+            appearance: none;
+            /* Remove default styling in modern browsers */
+            outline: none;
+
+            /* Remove the default outline */
+            /* Remove default styling in modern browsers */
+            &:focus {
+              outline: 1px solid silver;
+              border-radius: 5px;
+            }
+
           }
 
           i.deleteCategory {
@@ -401,15 +423,24 @@
               position: relative;
 
               // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-              h4,
+              h4 {
+                color: white;
+                font-size: 15px;
+
+
+              }
+
               h5 {
                 color: white;
               }
 
               input {
                 width: 100%;
-                border: none;
-                outline: none;
+                height: 26px;
+                // border: none;
+                // outline: none;
+                // outline-width: 1px;
+                // outline-color: silver;
                 background-color: transparent;
                 font-size: 16px;
                 font-weight: bold;
@@ -417,6 +448,25 @@
                 text-align: center;
                 position: relative;
                 z-index: 2;
+                border: none;
+                background: none;
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+                -webkit-appearance: none;
+                /* Remove default styling in Safari */
+                -moz-appearance: none;
+                /* Remove default styling in Firefox */
+                appearance: none;
+                /* Remove default styling in modern browsers */
+                outline: none;
+
+                /* Remove the default outline */
+                /* Remove default styling in modern browsers */
+                &:focus {
+                  outline: 1px solid silver;
+                  border-radius: 5px;
+                }
               }
 
               i.deleteTableName {
